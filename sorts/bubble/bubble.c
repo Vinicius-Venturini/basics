@@ -12,20 +12,20 @@ void swap(void *a, void *b, unsigned elementSize){
 
 void bubbleSort(void *array, unsigned long size, unsigned elementSize, int (*cmp)(const void *a, const void *b)){
     
-    int cont;
+    int count;
     
     while(1){
 
-        cont = 0;
+        count = 0;
 
         for(unsigned long i = 1; i < size; i++){
             if(cmp(array + (i - 1) * elementSize, array + i * elementSize) > 0){
                 swap(array + (i - 1) * elementSize, array + i * elementSize, elementSize);
-                cont = 1;
+                count = 1;
             }   
         }
 
-        if(!cont)
+        if(!count)
             break;
     }
 

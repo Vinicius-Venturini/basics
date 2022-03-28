@@ -12,9 +12,9 @@ void swap(void *a, void *b, unsigned elementSize){
 
 void insertionSort(void *array, unsigned long size, unsigned elementSize, int (*cmp)(const void *a, const void *b)){
     
-    int j;
+    long j;
     
-    for(unsigned long i = 1; i < size; i++){
+    for(long i = 1; i < size; i++){
         j = i - 1;
 
         while(j >= 0 && cmp((array + (j + 1) * elementSize), (array + j * elementSize)) <= 0){
